@@ -1,0 +1,14 @@
+services:
+  batchprocessattribute.batch_service:
+    class: 'Drupal\batchprocessattribute\Service\BatchService'
+    public: true
+
+  batchprocessattribute.batch_service.decorated:
+    class: 'Drupal\batchprocessattribute\BatchProcessorDecorator'
+    decorates: 'batchprocessattribute.batch_service'
+    arguments: ['@batchprocessattribute.batch_service.decorated.inner', '@logger.factory']
+    public: true
+
+  batchprocessattribute.batch_service.decorated.inner:
+    alias: batchprocessattribute.batch_service
+    public: false

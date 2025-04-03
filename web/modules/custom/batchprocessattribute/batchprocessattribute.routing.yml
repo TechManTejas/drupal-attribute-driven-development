@@ -1,0 +1,7 @@
+batchprocessattribute.test:
+  path: '/batchprocessattribute'
+  defaults:
+    _form: 'Drupal\batchprocessattribute\Form\BatchTestForm'
+    _title: 'Test Batch Process Attribute'
+  requirements:
+    _permission: 'access content'
