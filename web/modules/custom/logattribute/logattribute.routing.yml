@@ -1,0 +1,7 @@
+logattribute.test:
+  path: '/logattribute'
+  defaults:
+    _controller: 'Drupal\logattribute\Controller\LogAttributeController::test'
+    _title: 'Attribute Test'
+  requirements:
+    _permission: 'access content'
