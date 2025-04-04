@@ -18,7 +18,7 @@ class BatchService {
    * @return array
    *   The results of evaluation.
    */
-  #[BatchProcess(50)]
+  #[BatchProcess(10)]
   public function calculateResults(array $expressions) {
     $results = [];
     foreach ($expressions as $expression) {
