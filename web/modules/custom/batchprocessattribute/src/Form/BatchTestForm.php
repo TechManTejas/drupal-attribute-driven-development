@@ -68,8 +68,6 @@ class BatchTestForm extends FormBase {
     $expressions = $this->generateExpressions($num_expressions);
     
     $results = $this->batchService->calculateResults($expressions);
-    
-    $this->messenger()->addMessage($this->t('Processed @count batches.', ['@count' => count($results)]));
   }
 
   /**
